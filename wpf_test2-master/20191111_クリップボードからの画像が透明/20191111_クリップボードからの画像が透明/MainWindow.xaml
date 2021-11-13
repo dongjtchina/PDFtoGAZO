@@ -1,0 +1,26 @@
+﻿<Window x:Class="_20191111_クリップボードからの画像が透明.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20191111_クリップボードからの画像が透明"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+    <StackPanel Background="Gray">
+      <Button Content="クリップボードのデータ形式一覧表示" Click="ButtonViewFormats_Click"/>
+      <Button Content="GetImage()" Click="ButtonGetImage_Click"/>
+      <Button Content="GetData(Bitmap)" Click="ButtonGetDataBitmap_Click"/>
+      <Button Content="GetData(BitmapSource)" Click="ButtonGetDataBitmapSource_Click"/>
+      <Button Content="Streamに一時保存方式、BmpBitmapのエンコーダーとデコーダーを使う" Click="ButtonEncDec_Click"/>
+      <Button Content="Bgr32へ変換" Click="ButtonBgr32_Click"/>
+      <Button Content="GetData(DeviceIndependentBitmap)のbppで判定、32未満ならBgr32へ変換" Click="ButtonDeviceIndependentBitmap_Click"/>
+      <Button Content="GetData(DeviceIndependentBitmap)のbppとエクセル？で判定、32未満ならBgr32へ変換" Click="Button_Click"/>
+      <Button Content="すべてのピクセルのアルファの値を見て判定" Click="Button_Click_1"/>
+      <TextBlock Name="MyTextBlock" Text="クリップボードに画像をコピーした状態で上の各ボタンを押す"/>
+      <ScrollViewer UseLayoutRounding="True">
+        <Image Name="MyImage" Stretch="None"/>
+      </ScrollViewer>
+    </StackPanel>
+    </Grid>
+</Window>
